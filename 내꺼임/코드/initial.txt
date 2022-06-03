@@ -1,0 +1,154 @@
+<ImageView
+        android:id="@+id/imgMain"
+        android:layout_width="408dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/img_initialMain" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMain">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanumgothic_b"
+            android:text="@string/Title"
+            android:textAlignment="center"
+            android:textColor="@color/teal_200"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:text="@string/Explanation"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#00ff0000"
+            android:contentDescription="@string/Title"
+            android:foreground="@android:drawable/ic_delete" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linerLayout3"
+        android:layout_width="410dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/txtinfo_ex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:text="정보를 입력해주세요."
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/spn_info_Gender"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/Title"
+            android:fontFamily="@font/nanumsquare_r"
+            android:text="\t성별"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:backgroundTint="#1200"
+        />
+
+        <Button
+            android:id="@+id/spn_info_Grade"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#1200"
+            android:fontFamily="@font/nanumsquare_r"
+            android:text="\t학년 선택"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+
+
+            />
+
+        <Button
+            android:id="@+id/spn_info_School"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#1200"
+            android:fontFamily="@font/nanumsquare_r"
+            android:text="\t학교명"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+
+
+            />
+
+        <Button
+            android:id="@+id/btn_InitialEnd"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="?android:attr/colorFocusedHighlight"
+            android:fontFamily="@font/nanumsquare_b"
+            android:text="시작하기"
+            android:textSize="25sp"
+            android:textStyle="bold"
+
+            />
+
+    </LinearLayout>
