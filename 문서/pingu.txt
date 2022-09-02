@@ -1,0 +1,155 @@
+-- pingu.daily_learn_info definition
+
+CREATE TABLE `daily_learn_info` (
+  `daily_learn_info_if` varchar(100) DEFAULT NULL,
+  `weekly_learn_info_id` varchar(100) DEFAULT NULL,
+  `user_id` varchar(20) DEFAULT NULL,
+  `learn_day` date DEFAULT NULL,
+  `learning_time` datetime DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.learn_info definition
+
+CREATE TABLE `learn_info` (
+  `learn_info_id` varchar(100) DEFAULT NULL,
+  `day_learn_info_id` varchar(100) DEFAULT NULL,
+  `voca_note_id` varchar(100) DEFAULT NULL,
+  `learning_time` datetime DEFAULT NULL,
+  `new_know_word` int DEFAULT NULL,
+  `exam_rate` double DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.monthly_learn_info definition
+
+CREATE TABLE `monthly_learn_info` (
+  `monthly_learn_info_id` varchar(100) DEFAULT NULL,
+  `learn_month` varchar(100) DEFAULT NULL,
+  `learning_time` date DEFAULT NULL,
+  `attendance_date` int DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.publishing_company definition
+
+CREATE TABLE `publishing_company` (
+  `company_name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `status` tinyint DEFAULT NULL,
+  `phone_number` varchar(20) DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.textbook definition
+
+CREATE TABLE `textbook` (
+  `textbook_id` varchar(100) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `publishing_date` varchar(100) DEFAULT NULL,
+  `company_name` varchar(100) DEFAULT NULL,
+  `school` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `grade` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `word_number` int DEFAULT NULL,
+  `status` tinyint DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.`user` definition
+
+CREATE TABLE `user` (
+  `user_id` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `authority_level` varchar(7) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `status` tinyint DEFAULT NULL,
+  `logintime` datetime DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.user_info definition
+
+CREATE TABLE `user_info` (
+  `user_id` varchar(20) DEFAULT NULL,
+  `nickname` varchar(50) DEFAULT NULL,
+  `school` varchar(50) DEFAULT NULL,
+  `grade` varchar(10) DEFAULT NULL,
+  `total_learn_time` datetime DEFAULT NULL,
+  `total_attendance_date` int DEFAULT NULL,
+  `total_know_word` int DEFAULT NULL,
+  `exam_rate` double DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.voca_note definition
+
+CREATE TABLE `voca_note` (
+  `voca_note_id` varchar(100) DEFAULT NULL,
+  `voca_unit_id` varchar(100) DEFAULT NULL,
+  `word_number` int DEFAULT NULL,
+  `type` varchar(10) DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.voca_unit definition
+
+CREATE TABLE `voca_unit` (
+  `voca_unit_id` varchar(100) DEFAULT NULL,
+  `textbook_id` varchar(100) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `word_number` int DEFAULT NULL,
+  `type` varchar(10) DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- pingu.weekly_learn_info definition
+
+CREATE TABLE `weekly_learn_info` (
+  `weekly_learn_info_id` varchar(100) DEFAULT NULL,
+  `month_learn_info_id` varchar(100) DEFAULT NULL,
+  `learn_week` varchar(10) DEFAULT NULL,
+  `learning_time` datetime DEFAULT NULL,
+  `attendance_date` int DEFAULT NULL,
+  `remark` varchar(1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
