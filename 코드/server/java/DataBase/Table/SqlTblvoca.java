@@ -35,7 +35,7 @@ public class SqlTblvoca {
 
             stat.execute();
 		} catch (Exception e) {
-			System.out.println("[insert_user 오류]\n" + e.getStackTrace());
+			System.out.println("[insert_user 오류]\n" + e.getLocalizedMessage());
 			return false;
 		}       
       return true;
