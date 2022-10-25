@@ -10,7 +10,7 @@
   <?php
   echo "MySql 연결 테스트<br>";
 
-  $con = mysqli_connect("localhost", "root", "^admin!", "pingu");
+  //$con = mysqli_connect("localhost", "root", "^admin!", "pingu");
 
   if ($con) {
     echo "connect : 성공<br>";
